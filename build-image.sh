@@ -75,7 +75,7 @@ function dl_dep() {
 mkdir -p deps
 
 if [ "$IMAGE_TYPE" = "raspberrypi" ]; then
-	dl_dep raspberrypi-firmware.tar.gz https://github.com/raspberrypi/firmware/archive/1.20190925.tar.gz
+	dl_dep raspberrypi-firmware.tar.gz https://github.com/raspberrypi/firmware/archive/1.20200114.tar.gz
 elif [ "$IMAGE_TYPE" = "orangepipc2" ]; then
 	dl_dep linux-dtb-dev-sunxi64.deb https://apt.armbian.com/pool/main/l/linux-5.3.7-sunxi64/linux-dtb-dev-sunxi64_5.99.191031_arm64.deb
 	dl_dep linux-image-dev-sunxi64.deb https://apt.armbian.com/pool/main/l/linux-5.3.7-sunxi64/linux-image-dev-sunxi64_5.99.191031_arm64.deb
@@ -90,7 +90,7 @@ elif [ "$IMAGE_TYPE" = "orangepipc2" ]; then
 	fi
 fi
 
-dl_dep k3os-rootfs-arm64.tar.gz https://github.com/rancher/k3os/releases/download/v0.6.0/k3os-rootfs-arm64.tar.gz
+dl_dep k3os-rootfs-arm64.tar.gz https://github.com/rancher/k3os/releases/download/v0.9.0-rc5/k3os-rootfs-arm64.tar.gz
 
 # To find the URL for these packages:
 # - Go to https://launchpad.net/ubuntu/bionic/arm64/<package name>/
@@ -100,20 +100,20 @@ dl_dep k3os-rootfs-arm64.tar.gz https://github.com/rancher/k3os/releases/downloa
 
 dl_dep libc6-arm64.deb https://launchpadlibrarian.net/365857916/libc6_2.27-3ubuntu1_arm64.deb
 dl_dep busybox-arm64.deb https://launchpadlibrarian.net/414117084/busybox_1.27.2-2ubuntu3.2_arm64.deb
-dl_dep libcom-err2-arm64.deb https://launchpadlibrarian.net/444344115/libcom-err2_1.44.1-1ubuntu1.2_arm64.deb
-dl_dep libblkid1-arm64.deb https://launchpadlibrarian.net/438655401/libblkid1_2.31.1-0.4ubuntu3.4_arm64.deb
-dl_dep libuuid1-arm64.deb https://launchpadlibrarian.net/438655406/libuuid1_2.31.1-0.4ubuntu3.4_arm64.deb
-dl_dep libext2fs2-arm64.deb https://launchpadlibrarian.net/444344116/libext2fs2_1.44.1-1ubuntu1.2_arm64.deb
-dl_dep e2fsprogs-arm64.deb https://launchpadlibrarian.net/444344112/e2fsprogs_1.44.1-1ubuntu1.2_arm64.deb
+dl_dep libcom-err2-arm64.deb https://launchpadlibrarian.net/461678942/libcom-err2_1.44.1-1ubuntu1.3_arm64.deb
+dl_dep libblkid1-arm64.deb https://launchpadlibrarian.net/462347624/libblkid1_2.31.1-0.4ubuntu3.5_arm64.deb
+dl_dep libuuid1-arm64.deb https://launchpadlibrarian.net/462347628/libuuid1_2.31.1-0.4ubuntu3.5_arm64.deb
+dl_dep libext2fs2-arm64.deb https://launchpadlibrarian.net/461678943/libext2fs2_1.44.1-1ubuntu1.3_arm64.deb
+dl_dep e2fsprogs-arm64.deb https://launchpadlibrarian.net/461678940/e2fsprogs_1.44.1-1ubuntu1.3_arm64.deb
 dl_dep parted-arm64.deb https://launchpadlibrarian.net/415806982/parted_3.2-20ubuntu0.2_arm64.deb
 dl_dep libparted2-arm64.deb https://launchpadlibrarian.net/415806981/libparted2_3.2-20ubuntu0.2_arm64.deb
 dl_dep libreadline7-arm64.deb https://launchpadlibrarian.net/354246199/libreadline7_7.0-3_arm64.deb
 dl_dep libtinfo5-arm64.deb https://launchpadlibrarian.net/371711519/libtinfo5_6.1-1ubuntu1.18.04_arm64.deb
 dl_dep libdevmapper1-arm64.deb https://launchpadlibrarian.net/431292125/libdevmapper1.02.1_1.02.145-4.1ubuntu3.18.04.1_arm64.deb
 dl_dep libselinux1-arm64.deb https://launchpadlibrarian.net/359065467/libselinux1_2.7-2build2_arm64.deb
-dl_dep libudev1-arm64.deb https://launchpadlibrarian.net/444834685/libudev1_237-3ubuntu10.31_arm64.deb
+dl_dep libudev1-arm64.deb https://launchpadlibrarian.net/463642733/libudev1_237-3ubuntu10.38_arm64.deb
 dl_dep libpcre3-arm64.deb https://launchpadlibrarian.net/355683636/libpcre3_8.39-9_arm64.deb
-dl_dep util-linux-arm64.deb https://launchpadlibrarian.net/438655410/util-linux_2.31.1-0.4ubuntu3.4_arm64.deb
+dl_dep util-linux-arm64.deb https://launchpadlibrarian.net/462347634/util-linux_2.31.1-0.4ubuntu3.5_arm64.deb
 
 ## Make the image (capacity in MB, not MiB)
 echo "== Making image and filesystems... =="
